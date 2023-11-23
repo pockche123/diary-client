@@ -1,0 +1,87 @@
+@import url('https://fonts.cdnfonts.com/css/apple-chancery');
+
+* {
+    font-family: 'Apple Chancery', cursive, sans-serif;
+}
+
+body{
+    padding: 0; 
+    margin: 0; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #216477 ;
+
+}
+
+.container{
+    padding: 6% 5%; 
+    background-color:bisque;
+     height: 100vh;
+     width: 50%;
+}
+
+
+.login-container{
+    
+    width: 95%; 
+    min-height: 400px;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+    box-shadow:  0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.login-card{
+    padding: 20px 0; 
+}
+  table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+
+    table th[aria-sort="ascending"] span::after {
+  content: "▲";
+  font-size: 100%;
+  top: 0;
+  right: 10px;
+    }
+
+table th[aria-sort="descending"] span::after {
+  content: "▼";
+  font-size: 100%;
+  top: 0;
+}
+
+button{
+    cursor: pointer;
+}
+#time {
+    border: none;
+    font-weight: bolder;
+    font-size: large;
+    cursor: pointer;
+}
+
+.detail-container{
+    width: 95%; 
+    min-height: 70vh;
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+}
+
+#go-back{
+    border: none; 
+    font-size: larger;
+    border-radius: 5px;
+}

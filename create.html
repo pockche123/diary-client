@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script defer src="./static/js/create.js"></script>
+    <link rel="stylesheet" href="./static/css/style.css">
+    <title>Enter</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>New Entry</h1>
+            <hr />
+        </header>
+        <main>
+            <div class="detail-container">
+              <h2 id="create-title"></h2>
+              <div class="create-card">
+                <label for="create-content">Content:</label>
+                <textarea type="text" id="create-content" name="create-content" rows="5" cols="80"> </textarea>
+              </div>
+               <!-- <div class="create-card">
+                <label for="create-time">Time:</label>
+                <input type="text" id="create-time" name="create-time">
+              </div> -->
+               <div class="create-card">
+    <label for="create-category">Category:</label>
+    <select id="create-category" name="create-category">
+        <option value="WORK">Work</option>
+        <option value="FITNESS">Fitness</option>
+        <option value="TRAVEL">Travel</option>
+        <option value="PERSONAL">Personal</option>
+
+        <option value="OTHERS">Others</option>
+    </select>
+</div>
+              <div class="create-buttons">
+                <button id="create">Create</button>
+                 <button id="cancel">Cancel</button>
+              </div>
+            </div>
+
+
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>
