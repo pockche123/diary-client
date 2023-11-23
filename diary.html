@@ -20,12 +20,23 @@
         <main>
             <div class="login-container">
                 <h2>Activity Log</h2>
+                <div>
+                    <label for="category">Select Category</label>
+                    <select id="category" name="category">
+                        <option value="">ALL</option>
+                        <option value="WORK">Work</option>
+                        <option value="FITNESS">Fitness</option>
+                        <option value="TRAVEL">Travel</option>
+                        <option value="PERSONAL">Personal</option>
+                        <option value="OTHERS">Others</option>
+                    </select>
+                </div>
 
                 <table id="activityTable">
                     <thead>
                         <tr>
                             <th>Title</th>
-                            <th aria-sort="ascending">
+                            <th aria-sort="descending">
                                 <button id="time">
                                     Time <span aria-hidden="true"></span>
                                 </button>
@@ -37,10 +48,7 @@
                 </table>
 
             </div>
-         
-      <p><a href="./create.html">Create new entry.</a></p>
-
-
+            <p><a href="./create.html">Create new entry.</a></p>
         </main>
 
     </div>

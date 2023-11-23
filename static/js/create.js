@@ -1,7 +1,7 @@
 const cancel = document.getElementById('cancel')
-  
+
 cancel.addEventListener('click', goBack)
-  
+
 function goBack() {
     console.log("cancel clicked")
     window.location.assign('diary.html')
@@ -36,13 +36,13 @@ async function createEntry(e) {
     }
 
     const response = await fetch('http://localhost:3000/diary', options)
-    
-      if (response.status == 201) {
-          alert('New diary has been created')
-          window.location.assign('diary.html')
-  } else {
-    console.log(error)
-    alert('ERROR CREATING NEW ENTRY')
-  }
-    
+
+    if (response.status == 201) {
+        alert('New diary has been created')
+        window.location.assign('diary.html')
+    } else {
+        console.log(error)
+        alert('ERROR CREATING NEW ENTRY')
+    }
+
 }
