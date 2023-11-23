@@ -49,21 +49,54 @@ function goBack() {
 updateButton.addEventListener('click', doUpdate)
 deleteButton.addEventListener('click', doDelete)
 
-function doUpdate() {
+async function doUpdate() {
     
+    const id = localStorage.getItem('id')
+    const detailContent = document.getElementById('detail-content')
+
+    const options = {
+        method: 'PATCH',
+        headers: {
+            'Content-Type':'application/json'
+        },
+        body: JSON.stringify({
+            content: detailContent.value
+        })
+    }
+
+    const response = await fetch(`http://localhost:3000/diary/${parseInt(id)}`, options)
+
+
    let userConfirmed= confirm('Please confirm that you would like to update your diary entry:')
 
-    if (userConfirmed) {
+    if (userConfirmed && response.status == 200) {
         window.location.assign('diary.html')
+    } else {
+        alert('Failed to update entry')
     }
 }
 
-function doDelete() {
+async function doDelete() {
+    const id = localStorage.getItem('id')
+
+     const options = {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+    }
+    
+
+    const response = await fetch(`http://localhost:3000/diary/${parseInt(id)}`, options)
+
 
     let userConfirmed= confirm('Are you sure you want to delete your diary entry?')
 
-    if (userConfirmed) {
+    if (userConfirmed && response.ok) {
+        alert('This entry has been deleted')
         window.location.assign('diary.html')
+    } else {
+        alert('Failed to delete the entry')
     }
     
 }

@@ -1,59 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script defer src="./static/js/diary.js"></script>
-     <script defer src="./static/js/details.js"></script>
-    <link rel="stylesheet" href="./static/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script defer src="./static/js/details.js"></script>
+    <link rel="stylesheet" href="./static/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>Enter</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <header>
-            <h1>
-            <button id="go-back">  
+      <header>
+        <h1>
+          <button id="go-back">
             <i class="fa fa-toggle-left"></i>
-            </button>
-                Diary details  </h1>
-            <hr />
-        </header>
-        <main>
-            <div class="detail-container">
-              <h2 id="detail-title"></h2>
-              <div class="detail-card">
-                <label for="detail-content">Content:</label>
-                <textarea type="text" id="detail-content" name="detail-content" rows="3" cols="80"> </textarea>
-              </div>
-               <!-- <div class="detail-card">
+          </button>
+          Diary details
+        </h1>
+        <hr />
+      </header>
+      <main>
+        <div class="detail-container">
+          <h2 id="detail-title"></h2>
+          <div class="detail-card">
+            <label for="detail-content">Content:</label>
+            <textarea
+              type="text"
+              id="detail-content"
+              name="detail-content"
+              rows="3"
+              cols="80"
+            >
+            </textarea>
+          </div>
+          <!-- <div class="detail-card">
                 <label for="detail-time">Time:</label>
                 <input type="text" id="detail-time" name="detail-time">
               </div> -->
-                <select id="detail-category" name="detail-category">
-        <option value="WORK">Work</option>
-        <option value="FITNESS">Fitness</option>
-        <option value="TRAVEL">Travel</option>
-        <option value="PERSONAL">Personal</option>
-        <option value="OTHERS">Others</option>
-    </select>
+          <select id="detail-category" name="detail-category" disabled>
+            <option value="WORK">Work</option>
+            <option value="FITNESS">Fitness</option>
+            <option value="TRAVEL">Travel</option>
+            <option value="PERSONAL">Personal</option>
+            <option value="OTHERS">Others</option>
+          </select>
 
-              <div class="detail-buttons">
-                <button id="update">Update</button>
-                <button id="delete">Delete</button>
-
-              </div>
-            </div>
-
-
-
-        </main>
-
+          <div class="detail-buttons">
+            <button id="update">Update</button>
+            <button id="delete">Delete</button>
+          </div>
+        </div>
+      </main>
     </div>
-
-</body>
-
+  </body>
 </html>
